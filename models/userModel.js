@@ -2,12 +2,16 @@ const fs = require("fs");
 const path = require("path");
 
 const usersPath = path.join(__dirname, "../data/users.json");
+let userIdCounter = 1;
 
 const fetchUsers = () => {
   try {
     const dataBuffer = fs.readFileSync(usersPath);
     const dataJSON = dataBuffer.toString();
-    return JSON.parse(dataJSON);
+    const users = JSON.parse(dataJSON);
+    userIdCounter =
+      users.length > 0 ? Math.max(...users.map((user) => user.id)) + 1 : 1;
+    return users;
   } catch (error) {
     console.error("Error reading users:", error);
     return [];
@@ -23,7 +27,12 @@ const saveUsers = (users) => {
   }
 };
 
+const getNextUserId = () => {
+  return userIdCounter++;
+};
+
 module.exports = {
   fetchUsers,
   saveUsers,
+  getNextUserId,
 };
