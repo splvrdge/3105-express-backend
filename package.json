@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/splvrdge/3105-express-backend/issues"
   },
-  "homepage": "https://github.com/splvrdge/3105-express-backend#readme"
+  "homepage": "https://github.com/splvrdge/3105-express-backend#readme",
+  "dependencies": {
+    "express": "^4.21.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0"
+  }
 }
