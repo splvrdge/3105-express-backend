@@ -3,5 +3,10 @@
     "username": "franz",
     "email": "franz@gmail.com",
     "password": "$2b$10$z89KP9VJ7Y93xp87yz60E.xERDRI7l1rYYeQGuGFQnjE8pA6mVYQm"
+  },
+  {
+    "username": "james",
+    "email": "james@gmail.com",
+    "password": "$2b$10$RNDuvQCkFyeWolNuRG3RmeG48UPkosqVbyowxeVuxP01ICQDl0/iW"
   }
 ]
